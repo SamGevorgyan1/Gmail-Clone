@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/nav_primary">
+
+    <fragment
+        android:id="@+id/nav_primary"
+        android:name="com.gmailclone.ui.fragment.PrimaryFragment"
+        android:label="Primary"
+        tools:layout="@layout/fragment_primary" >
+        <action
+            android:id="@+id/action_nav_primary_to_composeFragment"
+            app:destination="@id/composeFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_promotions"
+        android:name="com.gmailclone.ui.fragment.PromotionsFragment"
+        android:label="Promotions"
+        tools:layout="@layout/fragment_promotions" />
+
+    <fragment
+        android:id="@+id/nav_social"
+        android:name="com.gmailclone.ui.fragment.SocialFragment"
+        android:label="Social"
+        tools:layout="@layout/fragment_social" />
+
+    <fragment
+        android:id="@+id/nav_starred"
+        android:name="com.gmailclone.ui.fragment.StarredFragment"
+        android:label="Starred"
+        tools:layout="@layout/fragment_starred" />
+
+    <fragment
+        android:id="@+id/nav_snoozed"
+        android:name="com.gmailclone.ui.fragment.SnoozedFragment"
+        android:label="Snoozed"
+        tools:layout="@layout/fragment_snoozed" />
+
+    <fragment
+        android:id="@+id/nav_important"
+        android:name="com.gmailclone.ui.fragment.ImportantFragment"
+        android:label="Important"
+        tools:layout="@layout/fragment_important" />
+
+    <fragment
+        android:id="@+id/nav_sent"
+        android:name="com.gmailclone.ui.fragment.SentFragment"
+        android:label="Sent"
+        tools:layout="@layout/fragment_sent" />
+
+    <fragment
+        android:id="@+id/nav_scheduled"
+        android:name="com.gmailclone.ui.fragment.ScheduledFragment"
+        android:label="Scheduled"
+        tools:layout="@layout/fragment_scheduled" />
+
+    <fragment
+        android:id="@+id/nav_outbox"
+        android:name="com.gmailclone.ui.fragment.OutboxFragment"
+        android:label="Outbox"
+        tools:layout="@layout/fragment_outbox" />
+
+    <fragment
+        android:id="@+id/nav_drafts"
+        android:name="com.gmailclone.ui.fragment.DraftsFragment"
+        android:label="Drafts"
+        tools:layout="@layout/fragment_drafts" />
+
+    <fragment
+        android:id="@+id/nav_all_mail"
+        android:name="com.gmailclone.ui.fragment.AllMailFragment"
+        android:label="All Mail"
+        tools:layout="@layout/fragment_all_mail" />
+
+    <fragment
+        android:id="@+id/nav_spam"
+        android:name="com.gmailclone.ui.fragment.SpamFragment"
+        android:label="Spam"
+        tools:layout="@layout/fragment_spam" />
+
+    <fragment
+        android:id="@+id/nav_trash"
+        android:name="com.gmailclone.ui.fragment.TrashFragment"
+        android:label="Trash"
+        tools:layout="@layout/fragment_trash" />
+    <fragment
+        android:id="@+id/composeFragment"
+        android:name="com.gmailclone.ui.fragment.ComposeFragment"
+        android:label="fragment_compose"
+        tools:layout="@layout/fragment_compose" />
+
+</navigation>
