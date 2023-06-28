@@ -1,4 +1,4 @@
-package com.gmailclone.ui
+package com.gmailclone.ui.main
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
