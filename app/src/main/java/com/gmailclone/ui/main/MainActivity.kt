@@ -2,12 +2,12 @@ package com.gmailclone.ui.main
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AlertDialog
 import androidx.core.view.GravityCompat
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.navigation.findNavController
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.AppBarConfiguration
-import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
 import com.gmailclone.R
 import com.gmailclone.databinding.ActivityMainBinding
@@ -24,14 +24,15 @@ class MainActivity : AppCompatActivity() {
         val binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+
         drawerLayout = binding.drawerLayout
         navigationView = binding.navigationView
 
-        val navHostFragment = supportFragmentManager.findFragmentById(R.id.container) as NavHostFragment
+        val navHostFragment =
+            supportFragmentManager.findFragmentById(R.id.container) as NavHostFragment
         val navController = navHostFragment.navController
 
-        val toolbar = binding.toolbar
-        setSupportActionBar(toolbar)
+
 
         appBarConfiguration = AppBarConfiguration(
             setOf(
@@ -52,7 +53,7 @@ class MainActivity : AppCompatActivity() {
             drawerLayout
         )
 
-        setupActionBarWithNavController(navController, appBarConfiguration)
+
         navigationView.setupWithNavController(navController)
 
 
@@ -78,10 +79,19 @@ class MainActivity : AppCompatActivity() {
                 else -> false
             }
         }
+        binding.userItem.setOnClickListener {
+            val dialogView = layoutInflater.inflate(R.layout.dialog_user, null)
+            val dialogBuilder = AlertDialog.Builder(this)
+            dialogBuilder.setView(dialogView)
+            val dialog = dialogBuilder.create()
+            dialog.show()
+        }
     }
 
     override fun onSupportNavigateUp(): Boolean {
         val navController = findNavController(R.id.container)
         return navController.navigateUp() || super.onSupportNavigateUp()
     }
+
+
 }

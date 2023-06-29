@@ -19,9 +19,8 @@
         <item name="windowNoTitle">true</item>
     </style>
 
-
-
     <style name="Theme.GmailClone.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+    <style name="Theme.GmailClone.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
 
 
 </resources>

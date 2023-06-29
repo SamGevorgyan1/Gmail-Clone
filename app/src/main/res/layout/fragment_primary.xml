@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.fragment.PrimaryFragment">
+    tools:context=".ui.main.fragment.PrimaryFragment">
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/buttonCompose"
@@ -17,10 +17,11 @@
         android:paddingTop="8dp"
         android:paddingEnd="16dp"
         android:paddingBottom="8dp"
-        android:background="@color/light_blue"
+        android:drawableStart="@drawable/ic_pencil"
+        android:background="@drawable/shape_light_blue"
         android:text="Compose"
         android:textAllCaps="false"
-        android:textColor="@android:color/white"
+        android:textColor="@color/dark_grey"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
