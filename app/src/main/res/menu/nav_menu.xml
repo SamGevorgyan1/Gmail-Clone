@@ -3,64 +3,76 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <group>
+                <item
+                    android:id="@+id/nav_primary"
+                    android:checkable="true"
+                    android:icon="@drawable/ic_primary"
+                    android:title="Primary" />
+                <item
+                    android:id="@+id/nav_promotions"
+                    android:checkable="true"
+                    android:icon="@drawable/ic_promotions"
+                    android:title="Promotions" />
+                <item
+                    android:id="@+id/nav_social"
+                    android:checkable="true"
+                    android:icon="@drawable/ic_user_social"
+                    android:title="Social" />
 
-
-        <item
-            android:id="@+id/nav_primary"
-            android:icon="@drawable/ic_primary"
-            android:title="Primary" />
-        <item
-            android:id="@+id/nav_promotions"
-            android:icon="@drawable/ic_promotions"
-            android:title="Promotions" />
-        <item
-            android:id="@+id/nav_social"
-            android:icon="@drawable/ic_user_social"
-            android:title="Social" />
 
 
         <item android:title="All labels">
             <menu>
-                    <item
-                        android:id="@+id/nav_starred"
-                        android:icon="@drawable/ic_star"
-                        android:title="Starred" />
-                    <item
-                        android:id="@+id/nav_snoozed"
-                        android:icon="@drawable/ic_clock"
-                        android:title="Snoozed" />
-                    <item
-                        android:id="@+id/nav_important"
-                        android:icon="@drawable/ic_arrow_right"
-                        android:title="Important" />
-                    <item
-                        android:id="@+id/nav_sent"
-                        android:icon="@drawable/ic_send"
-                        android:title="Sent" />
-                    <item
-                        android:id="@+id/nav_scheduled"
-                        android:icon="@drawable/ic_arrow_right"
-                        android:title="Scheduled" />
-                    <item
-                        android:id="@+id/nav_outbox"
-                        android:icon="@drawable/ic_outbox"
-                        android:title="Outbox" />
-                    <item
-                        android:id="@+id/nav_drafts"
-                        android:icon="@drawable/ic_draft"
-                        android:title="Drafts" />
-                    <item
-                        android:id="@+id/nav_all_mail"
-                        android:icon="@drawable/ic_all_mail"
-                        android:title="All Mail" />
-                    <item
-                        android:id="@+id/nav_spam"
-                        android:icon="@drawable/ic_spam"
-                        android:title="Spam" />
-                    <item
-                        android:id="@+id/nav_trash"
-                        android:icon="@drawable/ic_delete"
-                        android:title="Trash" />
+                <item
+                    android:id="@+id/nav_starred"
+                    android:checkable="true"
+                    android:icon="@drawable/ic_star"
+                    android:title="Starred" />
+                <item
+                    android:id="@+id/nav_snoozed"
+                    android:checkable="true"
+                    android:icon="@drawable/ic_clock"
+                    android:title="Snoozed" />
+                <item
+                    android:id="@+id/nav_important"
+                    android:checkable="true"
+                    android:icon="@drawable/ic_important"
+                    android:title="Important" />
+                <item
+                    android:id="@+id/nav_sent"
+                    android:checkable="true"
+                    android:icon="@drawable/ic_send_black"
+                    android:title="Sent" />
+                <item
+                    android:id="@+id/nav_scheduled"
+                    android:checkable="true"
+                    android:icon="@drawable/ic_arrow_right"
+                    android:title="Scheduled" />
+                <item
+                    android:id="@+id/nav_outbox"
+                    android:checkable="true"
+                    android:icon="@drawable/ic_outbox"
+                    android:title="Outbox" />
+                <item
+                    android:id="@+id/nav_drafts"
+                    android:checkable="true"
+                    android:icon="@drawable/ic_draft"
+                    android:title="Drafts" />
+                <item
+                    android:id="@+id/nav_all_mail"
+                    android:checkable="true"
+                    android:icon="@drawable/ic_all_mail"
+                    android:title="All Mail" />
+                <item
+                    android:id="@+id/nav_spam"
+                    android:icon="@drawable/ic_spam"
+                    android:checkable="true"
+                    android:title="Spam" />
+                <item
+                    android:id="@+id/nav_trash"
+                    android:checkable="true"
+                    android:icon="@drawable/ic_delete"
+                    android:title="Trash" />
             </menu>
         </item>
 
@@ -70,11 +82,13 @@
                 <group>
                     <item
                         android:id="@+id/nav_calendar"
+                        android:checkable="true"
                         android:icon="@drawable/ic_calendar"
                         android:title="Calendar" />
 
                     <item
                         android:id="@+id/nav_contacts"
+                        android:checkable="true"
                         android:icon="@drawable/ic_contact"
                         android:title="Contacts" />
 
@@ -85,11 +99,13 @@
 
         <item
             android:id="@+id/nav_settings"
+            android:checkable="true"
             android:icon="@drawable/ic_settings"
             android:title="Settings" />
 
         <item
             android:id="@+id/nav_help_feedback"
+            android:checkable="true"
             android:icon="@drawable/ic_help_feedback"
             android:title="Help feedback" />
     </group>

@@ -7,82 +7,135 @@
 
     <fragment
         android:id="@+id/nav_primary"
-        android:name="com.gmailclone.ui.main.fragment.PrimaryFragment"
+        android:name="com.gmailclone.ui.main.fragments.PrimaryFragment"
         android:label="Primary"
-        tools:layout="@layout/fragment_primary" />
+        tools:layout="@layout/fragment_primary" >
+        <action
+            android:id="@+id/action_nav_primary_to_nav_important"
+            app:destination="@id/nav_email_detail" />
+        <action
+            android:id="@+id/action_nav_primary_to_fragmentCompose"
+            app:destination="@id/fragmentCompose" />
+
+    </fragment>
 
 
     <fragment
         android:id="@+id/nav_promotions"
-        android:name="com.gmailclone.ui.main.fragment.PromotionsFragment"
+        android:name="com.gmailclone.ui.main.fragments.PromotionsFragment"
         android:label="Promotions"
         tools:layout="@layout/fragment_promotions" />
 
     <fragment
         android:id="@+id/nav_social"
-        android:name="com.gmailclone.ui.main.fragment.SocialFragment"
+        android:name="com.gmailclone.ui.main.fragments.SocialFragment"
         android:label="Social"
-        tools:layout="@layout/fragment_social" />
+        tools:layout="@layout/fragment_social" >
+        <action
+            android:id="@+id/action_nav_social_to_nav_email_detail"
+            app:destination="@id/nav_email_detail" />
+    </fragment>
 
     <fragment
         android:id="@+id/nav_starred"
-        android:name="com.gmailclone.ui.main.fragment.StarredFragment"
+        android:name="com.gmailclone.ui.main.fragments.StarredFragment"
         android:label="Starred"
         tools:layout="@layout/fragment_starred" />
 
     <fragment
         android:id="@+id/nav_snoozed"
-        android:name="com.gmailclone.ui.main.fragment.SnoozedFragment"
+        android:name="com.gmailclone.ui.main.fragments.SnoozedFragment"
         android:label="Snoozed"
         tools:layout="@layout/fragment_snoozed" />
 
     <fragment
-        android:id="@+id/nav_important"
-        android:name="com.gmailclone.ui.main.fragment.ImportantFragment"
-        android:label="Important"
-        tools:layout="@layout/fragment_important" />
+        android:id="@+id/nav_email_detail"
+        android:name="com.gmailclone.ui.main.fragments.EmailDetailFragment"
+        android:label="EmailDetail"
+        tools:layout="@layout/fragment_email_detail" >
+        <action
+            android:id="@+id/action_nav_important_to_nav_all_mail"
+            app:destination="@id/nav_all_mail" />
+        <action
+            android:id="@+id/action_nav_email_detail_to_fragmentCompose"
+            app:destination="@id/fragmentCompose" />
+    </fragment>
 
     <fragment
         android:id="@+id/nav_sent"
-        android:name="com.gmailclone.ui.main.fragment.SentFragment"
+        android:name="com.gmailclone.ui.main.fragments.SentFragment"
         android:label="Sent"
-        tools:layout="@layout/fragment_sent" />
+        tools:layout="@layout/fragment_sent" >
+
+        <action
+            android:id="@+id/action_nav_sent_to_nav_email_detail"
+            app:destination="@id/nav_email_detail" />
+    </fragment>
 
     <fragment
         android:id="@+id/nav_scheduled"
-        android:name="com.gmailclone.ui.main.fragment.ScheduledFragment"
+        android:name="com.gmailclone.ui.main.fragments.ScheduledFragment"
         android:label="Scheduled"
         tools:layout="@layout/fragment_scheduled" />
 
     <fragment
         android:id="@+id/nav_outbox"
-        android:name="com.gmailclone.ui.main.fragment.OutboxFragment"
+        android:name="com.gmailclone.ui.main.fragments.OutboxFragment"
         android:label="Outbox"
         tools:layout="@layout/fragment_outbox" />
 
     <fragment
         android:id="@+id/nav_drafts"
-        android:name="com.gmailclone.ui.main.fragment.DraftsFragment"
+        android:name="com.gmailclone.ui.main.fragments.DraftsFragment"
         android:label="Drafts"
         tools:layout="@layout/fragment_drafts" />
 
     <fragment
         android:id="@+id/nav_all_mail"
-        android:name="com.gmailclone.ui.main.fragment.AllMailFragment"
+        android:name="com.gmailclone.ui.main.fragments.AllMailFragment"
         android:label="All Mail"
-        tools:layout="@layout/fragment_all_mail" />
+        tools:layout="@layout/fragment_all_mail" >
+        <action
+            android:id="@+id/action_nav_all_mail_to_nav_important"
+            app:destination="@id/nav_email_detail" />
+    </fragment>
 
     <fragment
         android:id="@+id/nav_spam"
-        android:name="com.gmailclone.ui.main.fragment.SpamFragment"
+        android:name="com.gmailclone.ui.main.fragments.SpamFragment"
         android:label="Spam"
         tools:layout="@layout/fragment_spam" />
 
     <fragment
         android:id="@+id/nav_trash"
-        android:name="com.gmailclone.ui.main.fragment.TrashFragment"
+        android:name="com.gmailclone.ui.main.fragments.TrashFragment"
         android:label="Trash"
         tools:layout="@layout/fragment_trash" />
+    <fragment
+        android:id="@+id/meetFragment"
+        android:name="com.gmailclone.ui.main.fragments.MeetFragment"
+        android:label="fragment_meet"
+        tools:layout="@layout/fragment_meet" />
+    <fragment
+        android:id="@+id/nav_important"
+        android:name="com.gmailclone.ui.main.fragments.ImportantFragment"
+        android:label="ImportantFragment"
+        tools:layout="@layout/fragment_important"/>
+    <fragment
+        android:id="@+id/fragmentCompose"
+        android:name="com.gmailclone.ui.main.fragments.ComposeFragment"
+        android:label="FragmentCompose"
+        tools:layout="@layout/fragment_compose">
+        <action
+            android:id="@+id/action_fragmentCompose_to_nav_primary"
+            app:destination="@id/nav_primary" />
+    </fragment>
+    <fragment
+        android:id="@+id/searchSortFragment"
+        android:name="com.gmailclone.ui.main.fragments.SearchSortFragment"
+        android:label="SearchSortFragment"
+        tools:layout="@layout/fragment_search_sort"
 
+        />
 
 </navigation>

@@ -1,25 +1,30 @@
 package com.gmailclone.ui.auth
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import com.gmailclone.R
 import com.gmailclone.databinding.ActivitySigninBinding
-import com.gmailclone.ui.auth.fragment.SignInFragment
+import com.gmailclone.utils.GoogleSignInHelper
 
 class SignUpActivity : AppCompatActivity() {
+
+    private lateinit var googleSignInHelper: GoogleSignInHelper
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         val binding = ActivitySigninBinding.inflate(layoutInflater)
         setContentView(binding.root)
         supportActionBar?.hide()
-            supportFragmentManager.beginTransaction()
-                .replace(
-                    R.id.fragmentContainer,
-                   SignInFragment()
-                ).commit()
+
+        googleSignInHelper = GoogleSignInHelper.getInstance(this)
+
+        binding.btnGoogle.setOnClickListener {
+            googleSignInHelper.signInWithGoogle()
         }
     }
 
-
-
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        super.onActivityResult(requestCode, resultCode, data)
+        googleSignInHelper.handleActivityResult(requestCode, resultCode, data)
+    }
+}

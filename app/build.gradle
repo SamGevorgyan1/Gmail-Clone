@@ -2,18 +2,21 @@ plugins {
     id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
     id 'com.google.gms.google-services'
+    id 'kotlin-parcelize'
 }
 
 android {
     namespace 'com.gmailclone'
-    compileSdk 33
+    compileSdk 34
+
 
     defaultConfig {
         applicationId "com.gmailclone"
         minSdk 19
-        targetSdk 33
+        targetSdk 34
         versionCode 1
         versionName "1.0"
+        multiDexEnabled = true
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
@@ -31,8 +34,8 @@ android {
     kotlinOptions {
         jvmTarget = '1.8'
     }
-    buildFeatures{
-        viewBinding=true
+    buildFeatures {
+        viewBinding = true
     }
 }
 
@@ -40,14 +43,60 @@ dependencies {
 
     implementation 'androidx.core:core-ktx:1.10.1'
     implementation 'androidx.appcompat:appcompat:1.6.1'
-    implementation 'com.google.android.material:material:1.9.0'
+
     implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
-    implementation 'com.google.firebase:firebase-auth-ktx:21.2.0'
+
+    implementation 'com.google.firebase:firebase-auth-ktx:22.1.0'
     implementation 'com.google.firebase:firebase-analytics-ktx:21.3.0'
+    implementation 'com.google.firebase:firebase-database-ktx:20.2.2'
+    implementation 'com.google.firebase:firebase-firestore-ktx:24.7.0'
+
+
+    implementation 'me.relex:circleindicator:2.1.6'
+    implementation "androidx.viewpager2:viewpager2:1.0.0"
+    implementation 'androidx.recyclerview:recyclerview:1.3.0'
+
     implementation 'androidx.navigation:navigation-fragment-ktx:2.6.0'
     implementation 'androidx.navigation:navigation-ui-ktx:2.6.0'
+
+    implementation 'com.google.android.gms:play-services-auth:20.6.0'
+
+    implementation 'com.github.javafaker:javafaker:1.0.2'
+
+
+    //email validator
+    implementation group: 'commons-validator', name: 'commons-validator', version: '1.7'
+
+
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-core:1.7.2'
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.7.2'
+
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.5'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
+
+    implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.6.1'
+    implementation 'androidx.lifecycle:lifecycle-runtime-ktx:2.6.1'
+
+    implementation 'com.google.android.material:material:1.9.0'
+
+
+    implementation("androidx.multidex:multidex:2.0.1")
+
+    implementation 'io.insert-koin:koin-core:3.4.2'//koin version
+    // Koin Test features
+    testImplementation 'io.insert-koin:koin-test:3.4.1'//koin version
+
+            // Koin main features for Android
+    implementation 'io.insert-koin:koin-android:3.4.2'//koin android version
+
+
+    // Java Compatibility
+    implementation 'io.insert-koin:koin-android-compat:3.4.2'//koin android version
+    // Jetpack WorkManager
+    implementation 'io.insert-koin:koin-androidx-workmanager:3.4.2'//koin android version
+    // Navigation Graph
+    implementation 'io.insert-koin:koin-androidx-navigation:3.4.2'//koin android version
+
 
 }

@@ -14,3 +14,6 @@ dependencyResolutionManagement {
 }
 rootProject.name = "Gmail Clone"
 include ':app'
+include ':emailmodule'
+include ':common'
+include ':authmodule'

@@ -1,17 +1,179 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:tools="http://schemas.android.com/tools"
     tools:context=".ui.auth.SignUpActivity">
 
 
-    <FrameLayout
-        android:id="@+id/fragmentContainer"
+    <ImageView
+        android:id="@+id/ivGmailIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_20dp"
+        android:layout_marginTop="@dimen/_100dp"
+        android:background="@drawable/ic_gmail"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvSetUpEmailTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_15dp"
+        android:text="Set up email"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_24sp"
+        android:textStyle="normal"
+        app:layout_constraintStart_toStartOf="@id/ivGmailIcon"
+        app:layout_constraintTop_toBottomOf="@id/ivGmailIcon" />
+
+    <View
+        android:id="@+id/line1"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        />
+        android:layout_height="1dp"
+        android:layout_marginStart="@dimen/_20dp"
+        android:layout_marginTop="@dimen/_27dp"
+        android:layout_marginEnd="10dp"
+        android:background="@android:color/darker_gray"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvSetUpEmailTitle" />
+
+    <ImageView
+        android:id="@+id/ivGoogleIcon"
+        style="@style/iconImageViewStyle"
+        android:background="@drawable/ic_google"
+        app:layout_constraintBottom_toBottomOf="@+id/btnGoogle"
+        app:layout_constraintStart_toStartOf="@id/ivGmailIcon"
+        app:layout_constraintTop_toTopOf="@+id/btnGoogle" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnGoogle"
+        style="@style/buttonWithTitleStyle"
+        android:text="Google"
+        app:layout_constraintBottom_toBottomOf="@id/line2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/ivGoogleIcon"
+        app:layout_constraintTop_toTopOf="@id/line1" />
+
+
+    <View
+        android:id="@+id/line2"
+        style="@style/horizontalLineStyle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ivGoogleIcon" />
+
+    <ImageView
+        android:id="@+id/ivOutlookHotmailIcon"
+        style="@style/iconImageViewStyle"
+        android:background="@drawable/ic_outlook_hotmail_live"
+        app:layout_constraintBottom_toBottomOf="@+id/btnOutLookHotmail"
+        app:layout_constraintStart_toStartOf="@id/ivGmailIcon"
+        app:layout_constraintTop_toTopOf="@+id/btnOutLookHotmail" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnOutLookHotmail"
+        style="@style/buttonWithTitleStyle"
+        android:text="OutLook,Hotmail, and Live"
+        app:layout_constraintBottom_toBottomOf="@id/line3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/ivOutlookHotmailIcon"
+        app:layout_constraintTop_toTopOf="@id/line2" />
+
+    <View
+        android:id="@+id/line3"
+        style="@style/horizontalLineStyle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ivOutlookHotmailIcon" />
+
+    <ImageView
+        android:id="@+id/ivYahooIcon"
+        style="@style/iconImageViewStyle"
+        android:background="@drawable/ic_yahoo"
+
+        app:layout_constraintBottom_toBottomOf="@+id/btnYahoo"
+        app:layout_constraintStart_toStartOf="@id/ivGmailIcon"
+        app:layout_constraintTop_toTopOf="@id/btnYahoo" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnYahoo"
+        style="@style/buttonWithTitleStyle"
+        android:background="@null"
+        android:text="Yahoo"
+        app:layout_constraintBottom_toBottomOf="@id/line4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/ivYahooIcon"
+        app:layout_constraintTop_toTopOf="@id/line3" />
+
+    <View
+        android:id="@+id/line4"
+        style="@style/horizontalLineStyle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ivYahooIcon" />
+
+    <ImageView
+        android:id="@+id/ivExchangeAndOffice365"
+        style="@style/iconImageViewStyle"
+        android:background="@drawable/ic_exchange_office_365"
+        app:layout_constraintBottom_toBottomOf="@id/btnExchangeAndOffice"
+        app:layout_constraintStart_toStartOf="@id/ivGmailIcon"
+        app:layout_constraintTop_toTopOf="@id/btnExchangeAndOffice" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnExchangeAndOffice"
+        style="@style/buttonWithTitleStyle"
+        android:text="Exchange and Office 365"
+        app:layout_constraintBottom_toBottomOf="@id/line5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/ivExchangeAndOffice365"
+        app:layout_constraintTop_toTopOf="@id/line4" />
+
+    <View
+        android:id="@+id/line5"
+        style="@style/horizontalLineStyle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ivExchangeAndOffice365" />
+
+    <ImageView
+        android:id="@+id/ivOtherIcon"
+        style="@style/iconImageViewStyle"
+        android:background="@drawable/ic_email"
+        app:layout_constraintBottom_toBottomOf="@id/btnOther"
+        app:layout_constraintStart_toStartOf="@id/ivGmailIcon"
+        app:layout_constraintTop_toTopOf="@id/btnOther" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnOther"
+        style="@style/buttonWithTitleStyle"
+        android:text="Other"
+        app:layout_constraintBottom_toBottomOf="@id/line6"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/ivOtherIcon"
+        app:layout_constraintTop_toTopOf="@id/line5" />
+
+    <View
+        android:id="@+id/line6"
+        style="@style/horizontalLineStyle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ivOtherIcon" />
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 

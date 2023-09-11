@@ -1,15 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android">
-
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <item
-        android:id="@+id/bottom_notifications"
+        android:id="@+id/menu_notifications"
+        android:checkable="true"
+        android:icon="@drawable/ic_notification_selection"
         android:title=""
-        android:icon="@drawable/ic_notification" />
+        app:showAsAction="ifRoom" />
     <item
-        android:id="@+id/bottom_meet"
+        android:id="@+id/menu_meet"
+        android:checkable="true"
+        android:icon="@drawable/ic_meet_selector"
         android:title=""
-        android:icon="@drawable/ic_meet" />
+        app:showAsAction="ifRoom" />
 
 
 </menu>

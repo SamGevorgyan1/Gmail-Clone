@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.main.fragments.EmailDetailFragment">
+
+
+    <LinearLayout
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageButton
+            android:id="@+id/btnClose"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:padding="@dimen/_16dp"
+            android:src="@drawable/ic_close" />
+
+        <Space
+            android:layout_width="@dimen/_0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
+
+        <ImageButton
+            android:id="@+id/btnDelete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:src="@drawable/ic_delete"
+            android:textColor="@android:color/white" />
+
+        <Space
+            android:layout_width="@dimen/_20dp"
+            android:layout_height="match_parent" />
+
+
+        <ImageButton
+            android:id="@+id/btnEmail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:src="@drawable/ic_notification_border" />
+
+        <Space
+            android:layout_width="@dimen/_20dp"
+            android:layout_height="match_parent" />
+
+        <ImageButton
+            android:id="@+id/btnMenu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_15dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:src="@drawable/ic_menu_point" />
+
+    </LinearLayout>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/contentStart"
+        android:layout_width="@dimen/_0dp"
+        android:layout_height="@dimen/_0dp"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="@dimen/_16dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/contentEnd"
+        android:layout_width="@dimen/_0dp"
+        android:layout_height="@dimen/_0dp"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="@dimen/_16dp" />
+
+
+    <TextView
+        android:id="@+id/tvSubject"
+        android:layout_width="@dimen/_0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_20dp"
+        android:layout_marginEnd="@dimen/_5dp"
+        android:text="(no subject)"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_24sp"
+        app:layout_constraintEnd_toStartOf="@id/btnStar_"
+        app:layout_constraintStart_toStartOf="@id/contentStart"
+        app:layout_constraintTop_toBottomOf="@id/toolbar" />
+
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:id="@+id/btnStar_"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/ic_star"
+        app:layout_constraintBottom_toBottomOf="@id/tvSubject"
+        app:layout_constraintEnd_toEndOf="@id/contentEnd"
+        app:layout_constraintTop_toTopOf="@id/tvSubject" />
+
+
+    <TextView
+        android:id="@+id/ivUser"
+        android:layout_width="@dimen/_50dp"
+        android:layout_height="@dimen/_50dp"
+        android:layout_marginTop="@dimen/_20sp"
+        android:background="@drawable/shape_rounded_light_blue"
+        android:gravity="center"
+        android:text="S"
+        android:textAllCaps="true"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_30sp"
+        app:layout_constraintStart_toStartOf="@id/contentStart"
+        app:layout_constraintTop_toBottomOf="@id/tvSubject" />
+
+
+    <TextView
+        android:id="@+id/tvUserName"
+        android:layout_width="@dimen/_0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_10dp"
+        android:ellipsize="end"
+        android:maxLength="15"
+        android:text="Samvel Gevorgyan"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_20sp"
+        android:textStyle="bold"
+        app:layout_constrainedWidth="true"
+        app:layout_constraintStart_toEndOf="@id/ivUser"
+        app:layout_constraintTop_toTopOf="@id/ivUser" />
+
+
+    <TextView
+        android:id="@+id/tvTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_3dp"
+        android:text="2 days ago"
+        android:textSize="@dimen/_10sp"
+        app:layout_constraintBaseline_toBaselineOf="@id/tvUserName"
+        app:layout_constraintEnd_toStartOf="@id/btnReply"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintStart_toEndOf="@id/tvUserName" />
+
+
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:id="@+id/btnReply"
+        android:layout_width="@dimen/_20dp"
+        android:layout_height="@dimen/_20dp"
+        android:layout_marginStart="@dimen/_10dp"
+        android:layout_marginTop="@dimen/_10dp"
+        android:layout_marginEnd="@dimen/_5dp"
+        android:background="@drawable/ic_arrow_left"
+        app:layout_constraintEnd_toEndOf="@id/btnMenuCompat"
+        app:layout_constraintStart_toEndOf="@id/tvTime"
+        app:layout_constraintTop_toTopOf="@id/ivUser" />
+
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:id="@+id/btnMenuCompat"
+        android:layout_width="@dimen/_20dp"
+        android:layout_height="@dimen/_20dp"
+        android:background="@drawable/ic_menu_point"
+        app:layout_constraintBottom_toBottomOf="@id/btnReply"
+        app:layout_constraintEnd_toEndOf="@id/contentEnd"
+        app:layout_constraintTop_toTopOf="@id/btnReply" />
+
+    <TextView
+        android:id="@+id/tvEmail"
+        android:layout_width="@dimen/_0dp"
+        android:layout_height="@dimen/_0dp"
+        android:layout_marginTop="@dimen/_16dp"
+        android:layout_marginBottom="@dimen/_16dp"
+        app:layout_constraintBottom_toTopOf="@id/btnReplyAll"
+        app:layout_constraintEnd_toEndOf="@+id/contentEnd"
+        app:layout_constraintStart_toStartOf="@id/contentStart"
+        app:layout_constraintTop_toBottomOf="@id/ivUser" />
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnReply_"
+        style="@style/answerButtonStyle"
+        android:layout_marginBottom="@dimen/_16dp"
+        android:drawableStart="@drawable/ic_arrow_left"
+        android:text="Reply"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/btnReplyAll"
+        app:layout_constraintStart_toStartOf="@id/contentStart" />
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnReplyAll"
+        style="@style/answerButtonStyle"
+        android:drawableStart="@drawable/ic_reply_all"
+        android:maxLines="1"
+        android:text="Replay all"
+        app:layout_constraintBottom_toBottomOf="@+id/btnReply_"
+        app:layout_constraintEnd_toStartOf="@id/btnForward"
+        app:layout_constraintStart_toEndOf="@id/btnReply_" />
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnForward"
+        style="@style/answerButtonStyle"
+        android:drawableStart="@drawable/ic_arrow_right"
+        android:maxLines="1"
+        android:text="Forward"
+        app:layout_constraintBottom_toBottomOf="@+id/btnReply_"
+        app:layout_constraintEnd_toEndOf="@id/contentEnd"
+        app:layout_constraintStart_toEndOf="@id/btnReplyAll" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

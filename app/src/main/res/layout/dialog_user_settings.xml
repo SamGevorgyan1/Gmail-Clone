@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintBottom_toBottomOf="parent"
+
+    android:background="@drawable/shape_background_rounded_white">
+
+
+    <View
+        android:id="@+id/whiteBackgroundView"
+        android:layout_width="0dp"
+        android:layout_height="130dp"
+        android:background="@drawable/shape_background_white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvGoogleIcon"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"/>
+
+    <View
+        android:id="@+id/whiteBackgroundView2"
+        android:layout_width="0dp"
+        android:layout_height="130dp"
+        android:layout_marginTop="3dp"
+        android:background="@drawable/shape_background_white_"
+        app:layout_constraintEnd_toEndOf="@id/whiteBackgroundView"
+        app:layout_constraintStart_toStartOf="@id/whiteBackgroundView"
+        app:layout_constraintTop_toBottomOf="@+id/btnStorage" />
+
+
+    <ImageView
+        android:id="@+id/tvGoogleIcon"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:background="@drawable/ic_google_"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/ivProfile"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/shape_rounded"
+        android:gravity="center"
+        android:text="S"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@id/whiteBackgroundView"
+        app:layout_constraintTop_toTopOf="@id/whiteBackgroundView" />
+
+    <TextView
+        android:id="@+id/tvUserName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:text="Samvel Gevorgyan"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toEndOf="@+id/ivProfile"
+        app:layout_constraintTop_toTopOf="@+id/ivProfile" />
+
+    <TextView
+        android:id="@+id/tvUserEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="samg05981@gmail.com"
+        android:textColor="@color/dark_grey"
+        app:layout_constraintStart_toStartOf="@id/tvUserName"
+        app:layout_constraintTop_toBottomOf="@id/tvUserName" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnManage"
+        android:layout_width="0dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="50dp"
+        android:background="@drawable/shape_stroke_rounded_dark_grey"
+        android:text="Manage your Google Account"
+        android:textAllCaps="false"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvUserEmail" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnStorage"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="3dp"
+        android:background="@color/white"
+        android:drawableStart="@drawable/ic_cloud"
+        android:gravity="center_vertical"
+        android:paddingStart="20dp"
+        android:text="Storage used:0% of 15 GB"
+        android:textAllCaps="false"
+        android:textColor="@color/dark_grey"
+        app:layout_constraintEnd_toEndOf="@id/whiteBackgroundView"
+        app:layout_constraintStart_toStartOf="@id/whiteBackgroundView"
+        app:layout_constraintTop_toBottomOf="@id/whiteBackgroundView" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnAddAccount"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:background="@color/white"
+        android:drawableStart="@drawable/ic_contact"
+        android:gravity="center_vertical"
+        android:paddingStart="20dp"
+        android:text="Add another account"
+        android:textAllCaps="false"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/whiteBackgroundView2"
+        app:layout_constraintTop_toTopOf="@id/whiteBackgroundView2" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:background="@color/white"
+        android:drawableStart="@drawable/ic_settings"
+        android:gravity="center_vertical"
+        android:paddingStart="20dp"
+        android:text="Manage accounts on this device"
+        android:textAllCaps="false"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/whiteBackgroundView2"
+        app:layout_constraintTop_toBottomOf="@id/btnAddAccount" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
